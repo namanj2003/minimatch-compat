@@ -1,0 +1,29 @@
+{
+  "name": "minimatch-compat",
+  "version": "1.0.0",
+  "description": "Callable CommonJS and ESM adapter for the patched minimatch 11 API.",
+  "license": "MIT",
+  "engines": {
+    "node": "18 || 20 || >=22"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/compat.test.js"
+  },
+  "dependencies": {
+    "minimatch-real": "npm:minimatch@11.0.3"
+  }
+}
